@@ -1,0 +1,16 @@
+body{
+    background-color: rgb(134, 155, 155);
+}
+.nome_empresa {
+    background-color: rgb(63, 63, 63);
+    color: aliceblue;
+}
+
+.servicos {
+    background-color: rgb(120, 120, 127);
+    color: white;
+}
+
+.contato {
+    background-color: beige;
+}

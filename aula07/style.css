@@ -1,0 +1,22 @@
+/* aplique os estilos globalmente em um arquivo, utlize a tag <style> em documentos especificos que usam utlização defrente do global(site todo) e o parâmetro style da tag, quando quiser fazer destes, sem afetar o global. */
+
+* {
+    border: 1px solid darkslateblue
+}
+
+.palestras{
+    background-color: rgb(145, 247, 213);
+    color: rgb(255, 0, 238);
+}
+
+.cursos{
+    background-color: beige;
+    color: black;
+}
+
+.eventos{
+    background-color: darkblue;
+    color: aliceblue;
+}
+
+

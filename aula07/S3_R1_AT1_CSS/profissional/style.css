@@ -1,0 +1,37 @@
+body {
+    background-color: #dce0e6; 
+    color: #1f1f20;            
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.cabecalho {
+    background-color: #2b4c7e;
+    color: white;
+    padding: 10px;
+}
+
+
+#banner {
+    background-color: #1f1f20; 
+    padding: 20px;
+}
+
+
+.cursos {
+    color: #606d80; 
+}
+
+/* Contato */
+.contato a {
+    color: #567ebb; 
+    font-weight: bold;
+}
+
+/* Rodapé */
+.rodape {
+    background-color: #2b4c7e; 
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
