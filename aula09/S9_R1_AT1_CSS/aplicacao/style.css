@@ -1,0 +1,18 @@
+.arquivo button {
+    background-color: blue;
+    color: white;
+}
+
+
+.forms button {
+    color: aqua;
+}
+
+
+.ativ button {
+    transform: scale(1.1);
+}
+
+button {
+    transition: 0.5s;
+}
