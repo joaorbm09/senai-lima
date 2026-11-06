@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicação</title>
+</head>
+<body>
+    <header>
+        <h1>Bem vindos ao formulario</h1>
+        <p><strong>Prencha o formulario de inscrção do curso</strong></p>
+    </header>
+    <main>
+            <form method="POST">
+                <div>
+                    <label for="nome">Nome completo:</label>
+                    <input type="text" name="nome" id="nome" placeholder="Digite seu nome completo" required><br>
+                    
+                    <label for="date">Data de nascimento:</label>
+                    <input type="date" name="data" id="data" placeholder="Digite sua data de nascimento" required><hr>
+
+                    <label for="telefone">Digite seu telefone: </label>
+                    <input type="tel" name="tel" id="tel" placeholder="Digite seu numero" required><br>
+
+                    <label for="email">Digite seu email: </label>
+                    <input type="email" name="email" id="email" placeholder="Digite seu email"><hr>
+
+                    <label for="observacao">Suas observações:</label><br>
+                    <textarea id="observacoes" name="observacoes" placeholder="Informe suas observações"></textarea><br>
+
+                    <button type="submit">Enviar Formulario</button>
+                </div>
+            </form>    
+    </main>
+</body>
+</html>

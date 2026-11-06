@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Profissional - Landing Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        /* Inclina o banner. */
+        .hero-banner {
+            background-color: steelblue;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            transform: skew(-5deg);
+        }
+
+        /* Mantém o texto do banner sem inclinação. */
+        .hero-content {
+            transform: skew(5deg);
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background-color: coral;
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+        }
+
+        /* Aumenta o botão ao passar o mouse. */
+        .btn-cta:hover {
+            transform: scale(1.1);
+        }
+
+        .cards-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .card-feature {
+            flex: 1 1 200px;
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Move o card para cima ao passar o mouse. */
+        .card-feature:hover {
+            transform: translate(0, -10px);
+        }
+
+        .icon {
+            display: inline-block;
+            font-size: 32px;
+        }
+
+        /* Gira o ícone ao passar o mouse no card. */
+        .card-feature:hover .icon {
+            transform: rotate(20deg);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Banner Principal com skew() -->
+        <header class="hero-banner">
+            <div class="hero-content">
+                <h1>Soluções Digitais para seu Negócio</h1>
+                <p>Aumente sua produtividade e alcance novos clientes com nossa plataforma.</p>
+                <!-- Botão com scale() no hover -->
+                <a href="#" class="btn-cta">Começar Agora</a>
+            </div>
+        </header>
+
+        <!-- Seção de Cards com translate() e rotate() -->
+        <main class="cards-grid">
+            <div class="card-feature">
+                <span class="icon"></span>
+                <h3>Velocidade</h3>
+                <p>Carregamento ultrarrápido garantindo a melhor experiência ao usuário.</p>
+            </div>
+
+            <div class="card-feature">
+                <span class="icon"></span>
+                <h3>Segurança</h3>
+                <p>Proteção de dados completa contra ameaças com encriptação avançada.</p>
+            </div>
+
+            <div class="card-feature">
+                <span class="icon"></span>
+                <h3>Escalabilidade</h3>
+                <p>Estrutura pronta para crescer junto com a demanda da sua empresa.</p>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

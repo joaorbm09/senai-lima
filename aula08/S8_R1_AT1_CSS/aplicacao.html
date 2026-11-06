@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 2 - Cards</title>
+    <style>
+        .card {
+            display: inline-block;
+            width: 200px;
+            margin: 30px;
+            padding: 20px;
+            background-color: lightgray;
+            text-align: center;
+        }
+
+        /* Aumenta o tamanho do card em 10%. */
+        .card1 {
+            transform: scale(1.1);
+        }
+
+        /* Gira o card em 10 graus. */
+        .card2 {
+            transform: rotate(10deg);
+        }
+
+        /* Move o card 10 pixels para cima. */
+        .card3 {
+            transform: translateY(-10px);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card card1">
+        <h3>Card 1</h3>
+        <p>scale(1.1)</p>
+    </div>
+
+    <div class="card card2">
+        <h3>Card 2</h3>
+        <p>rotate(10deg)</p>
+    </div>
+
+    <div class="card card3">
+        <h3>Card 3</h3>
+        <p>translateY(-10px)</p>
+    </div>
+
+</body>
+</html>

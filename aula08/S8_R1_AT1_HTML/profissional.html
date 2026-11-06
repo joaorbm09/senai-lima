@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profissional</title>
+</head>
+<body>
+    <header>
+        <h1>Caro cliente bem-vindo ao nosso formulario!!</h1>
+        <p>Preencha o nosso cadatro para prosseguir</p>
+    </header>
+    <main>
+
+        <section>
+            <form method="POST">
+                <div>
+                    <label for="nome">Nome completo:</label>
+                    <input type="text" name="nome" id="nome" placeholder="Digite seu nome completo" required><br>
+                    
+                    <label for="email">Digite seu email: </label>
+                    <input type="email" name="email" id="email" placeholder="Digite seu email"><br>
+                    
+                    <label for="telefone">Digite seu telefone: </label>
+                    <input type="tel" name="tel" id="tel" placeholder="Digite seu numero" required><br>
+                    
+                    <label for="cidade">Cidade:</label>
+                    <input type="text" id="cidade" name="cidade" placeholder="Ex: Americana" required>        
+                    <hr>
+                </div>
+            </form>
+        </section>
+        <h3>Dados complementares:</h3>
+        <section>
+            <form method="post">
+                <div>
+                    <label for="date">Data de nascimento:</label>
+                    <input type="date" name="data" id="data" placeholder="Digite sua data de nascimento" required><br>
+                    
+                    <label for="observacao">Suas observações:</label><br>
+                    <textarea id="observacoes" name="observacoes" placeholder="Informe suas observações"></textarea><br>
+                    
+                    <hr>
+                </div>
+            </form>
+        </section>
+        <button type="submit">Enviar Formulario</button>
+    </main>
+</body>
+</html>
