@@ -8,6 +8,7 @@
 <body>
 
     <h1>Inscrição em Evento</h1>
+    <p>Todos os campos são obrigatórios, exceto Observações.</p>
     <form>
         <p>
             <label for="ev-nome">Nome Completo:</label>
@@ -21,7 +22,8 @@
 
         <p>
             <label for="ev-tel">Telefone:</label>
-            <input type="tel" pattern="[0-9]{10,11}" title="Digite o DDD e o telefone, somente números" id="ev-tel" name="telefone" placeholder="19999999999" required>
+            <input type="tel" pattern="[0-9]{10,11}" title="Digite o DDD e o telefone, somente números" id="ev-tel" name="telefone" placeholder="19999999999" aria-describedby="ev-tel-ajuda" required>
+            <small id="ev-tel-ajuda">Informe o DDD e o telefone: 10 ou 11 dígitos, somente números.</small>
         </p>
 
         <p>
@@ -35,7 +37,7 @@
         </p>
 
         <p>
-            <label for="ev-obs">Observações:</label>
+            <label for="ev-obs">Observações (opcional):</label>
             <textarea id="ev-obs" name="observacoes" placeholder="Alguma necessidade especial?"></textarea>
         </p>
 

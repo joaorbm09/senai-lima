@@ -8,10 +8,12 @@
 <body>
 
     <h1>Abertura de Chamado Técnico</h1>
+    <p>Todos os campos são obrigatórios.</p>
     <form>
         <p>
             <label for="eq-num">Número do Equipamento:</label>
-            <input type="text" id="eq-num" name="equipamento" placeholder="Ex: EQ-1042" required minlength="4" maxlength="10">
+            <input type="text" id="eq-num" name="equipamento" placeholder="Ex: EQ-1042" aria-describedby="eq-num-ajuda" required minlength="4" maxlength="10">
+            <small id="eq-num-ajuda">Informe o código do equipamento com 4 a 10 caracteres.</small>
         </p>
 
         <p>
@@ -31,7 +33,8 @@
 
         <p>
             <label for="ch-desc">Descrição do Problema:</label>
-            <textarea id="ch-desc" name="descricao" placeholder="Descreva o problema com detalhes..." required minlength="10" maxlength="300"></textarea>
+            <textarea id="ch-desc" name="descricao" placeholder="Descreva o problema com detalhes..." aria-describedby="ch-desc-ajuda" rows="5" required minlength="10" maxlength="300"></textarea>
+            <small id="ch-desc-ajuda">Descreva o problema usando de 10 a 300 caracteres.</small>
         </p>
 
         <p>

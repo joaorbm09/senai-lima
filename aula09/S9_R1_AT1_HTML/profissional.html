@@ -8,12 +8,13 @@
 <body>
 
     <h1>Cadastro de Candidatos</h1>
+    <p>Todos os campos são obrigatórios.</p>
     <form>
         <fieldset>
             <legend>Dados Pessoais</legend>
             <p>
                 <label for="cand-nome">Nome Completo:</label>
-                <input type="text" id="cand-nome" name="nome" placeholder="Digite seu nome" required>
+                <input type="text" id="cand-nome" name="nome" placeholder="Digite seu nome completo" required>
             </p>
 
             <p>
@@ -23,7 +24,8 @@
 
             <p>
                 <label for="cand-tel">Telefone:</label>
-                <input type="tel" pattern="[0-9]{10,11}" title="Digite o DDD e o telefone, somente números" id="cand-tel" name="telefone" placeholder="19988888888" required>
+                <input type="tel" pattern="[0-9]{10,11}" title="Digite o DDD e o telefone, somente números" id="cand-tel" name="telefone" placeholder="19988888888" aria-describedby="cand-tel-ajuda" required>
+                <small id="cand-tel-ajuda">Informe o DDD e o telefone: 10 ou 11 dígitos, somente números.</small>
             </p>
 
             <p>
