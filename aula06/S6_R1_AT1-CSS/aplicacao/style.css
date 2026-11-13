@@ -1,0 +1,31 @@
+ body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: #f2f2f2;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .banner {
+            min-height: 200px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .azul-verde {
+            background: linear-gradient(to right, #144a99 0%, #176333 100%);
+        }
+
+        .preto-cinza {
+            background: linear-gradient(to right, black 0%, #666666 100%);
+        }
+
+        .roxo-rosa-laranja {
+            background: linear-gradient(120deg, #622080 0%, #a51c60 50%, #a34200 100%);
+        }
