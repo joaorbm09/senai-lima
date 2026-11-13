@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Demonstração de CSS Columns com comparação entre duas e três colunas.">
+    <title>Leitura em colunas | Atividade de CSS</title>
+    <style>
+        :root {
+            color-scheme: light;
+            font-family: Georgia, "Times New Roman", serif;
+            color: #23332d;
+            background: #f3f5ef;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .page {
+            width: min(100% - 2rem, 1100px);
+            margin: 0 auto;
+            padding: 3rem 0;
+        }
+
+        .eyebrow {
+            margin: 0 0 0.75rem;
+            color: #48755e;
+            font: 700 0.8rem/1.4 Arial, sans-serif;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        h1,
+        h2 {
+            font-family: Arial, sans-serif;
+            line-height: 1.2;
+        }
+
+        h1 {
+            max-width: 16ch;
+            margin: 0;
+            font-size: clamp(2.4rem, 6vw, 4.5rem);
+        }
+
+        .intro {
+            max-width: 62ch;
+            margin: 1.25rem 0 2rem;
+            color: #4a5b53;
+            font: 1.1rem/1.7 Arial, sans-serif;
+        }
+
+        .answer,
+        .reader,
+        .comparison {
+            border: 1px solid #d5ded5;
+            border-radius: 1rem;
+            background: #fff;
+            box-shadow: 0 12px 32px rgb(35 51 45 / 6%);
+        }
+
+        .answer {
+            margin-bottom: 1.5rem;
+            padding: 1rem 1.25rem;
+            font: 1rem/1.6 Arial, sans-serif;
+        }
+
+        .answer p {
+            margin: 0.25rem 0;
+        }
+
+        .reader {
+            padding: clamp(1.25rem, 4vw, 2.5rem);
+        }
+
+        .reader h2 {
+            margin: 0;
+            font-size: clamp(1.5rem, 3vw, 2.1rem);
+        }
+
+        .byline {
+            margin: 0.75rem 0 1.5rem;
+            color: #627068;
+            font: 0.9rem/1.5 Arial, sans-serif;
+        }
+
+        .controls {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.75rem;
+            margin: 0 0 1.5rem;
+            font: 0.95rem/1.5 Arial, sans-serif;
+        }
+
+        .controls button {
+            min-height: 44px;
+            padding: 0.65rem 1rem;
+            border: 2px solid #35634b;
+            border-radius: 0.5rem;
+            background: #fff;
+            color: #244b37;
+            font: inherit;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .controls button[aria-pressed="true"] {
+            background: #35634b;
+            color: #fff;
+        }
+
+        .controls button:focus-visible {
+            outline: 3px solid #d18b35;
+            outline-offset: 3px;
+        }
+
+        .article-copy {
+            column-gap: 40px;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            hyphens: auto;
+        }
+
+        .article-copy.columns-2 {
+            column-count: 2;
+        }
+
+        .article-copy.columns-3 {
+            column-count: 3;
+        }
+
+        .article-copy p {
+            margin: 0 0 1.15rem;
+            break-inside: avoid;
+        }
+
+        .comparison {
+            margin-top: 1.5rem;
+            padding: 1.25rem;
+            font: 1rem/1.7 Arial, sans-serif;
+        }
+
+        .comparison h2 {
+            margin-top: 0;
+            font-size: 1.25rem;
+        }
+
+        .comparison p {
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 650px) {
+            .page {
+                padding: 2rem 0;
+            }
+
+            .article-copy.columns-2,
+            .article-copy.columns-3 {
+                column-count: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="page">
+        <p class="eyebrow">Atividade de aplicação · CSS Columns</p>
+        <h1>Uma cidade que aprende a respirar</h1>
+        <p class="intro">Compare a mesma matéria em duas e três colunas. Em telas pequenas, o texto volta a uma única coluna para preservar o conforto de leitura.</p>
+
+        <aside class="answer" aria-label="Resposta do exercício 1">
+            <p><strong>Exercício 1:</strong> a propriedade utilizada é <code>column-count</code>.</p>
+            <p>Com <code>column-count: 3;</code>, o conteúdo é distribuído em três colunas.</p>
+        </aside>
+
+        <article class="reader" lang="pt-BR">
+            <header>
+                <h2>Pequenos espaços, grandes mudanças</h2>
+                <p class="byline">Uma leitura sobre cidades mais verdes · 5 min de leitura</p>
+            </header>
+
+            <div class="controls" role="group" aria-label="Escolha a quantidade de colunas">
+                <span>Visualizar:</span>
+                <button type="button" data-columns="2" aria-pressed="true">Duas colunas</button>
+                <button type="button" data-columns="3" aria-pressed="false">Três colunas</button>
+            </div>
+
+            <div class="article-copy columns-2" id="materia">
+                <p>Em uma cidade movimentada, encontrar um pedaço de natureza pode transformar o ritmo do dia. Uma árvore na calçada oferece sombra, um canteiro florido atrai abelhas e uma horta comunitária aproxima vizinhos que talvez nunca tivessem conversado. Essas mudanças parecem pequenas quando vistas isoladamente, mas, juntas, ajudam a construir bairros mais saudáveis e acolhedores.</p>
+                <p>O verde urbano também tem efeitos práticos. Plantas ajudam a reduzir a temperatura em ruas expostas ao sol, retêm parte da água da chuva e melhoram a qualidade dos espaços públicos. Parques e praças convidam as pessoas a caminhar, brincar e descansar. Quando esses lugares são acessíveis e bem cuidados, tornam-se pontos de encontro importantes para moradores de diferentes idades.</p>
+                <p>Nem toda iniciativa precisa começar com um grande terreno. Vasos em uma varanda, ervas plantadas em uma janela ou um jardim vertical podem tornar uma casa mais agradável. Em áreas compartilhadas, a participação dos moradores é essencial: escolher espécies adequadas ao clima, combinar horários de cuidado e dividir ferramentas evita que o projeto dependa de uma única pessoa.</p>
+                <p>As hortas coletivas acrescentam outro benefício: o aprendizado. Crianças observam o ciclo das plantas, adultos trocam receitas e todos descobrem como o alimento chega à mesa. Cultivar temperos e hortaliças pode incentivar refeições variadas e reduzir o desperdício, principalmente quando a colheita é planejada para atender às necessidades do grupo.</p>
+                <p>Para que um espaço verde dure, é importante planejar com atenção. O acesso à água, a incidência de sol, a circulação de pessoas e a segurança devem ser considerados antes do plantio. Espécies nativas costumam se adaptar melhor às condições locais e podem oferecer abrigo e alimento à fauna. Placas simples também ajudam a explicar o propósito do jardim e a convidar o público a respeitá-lo.</p>
+                <p>A colaboração entre moradores, escolas, organizações e poder público amplia os resultados. Uma escola pode cuidar de um canteiro didático; comerciantes podem apoiar a manutenção de uma praça; e a prefeitura pode fornecer orientação técnica e mudas. A escuta da comunidade é indispensável para que as melhorias atendam a quem usa o espaço todos os dias.</p>
+                <p>Há desafios, é claro. A falta de tempo, os períodos de seca e a manutenção irregular podem comprometer o trabalho. Por isso, projetos simples, com responsabilidades bem distribuídas, tendem a ser mais resilientes. Um calendário compartilhado, a escolha de plantas resistentes e a avaliação periódica das necessidades ajudam a manter o jardim vivo sem sobrecarregar os participantes.</p>
+                <p>Começar pode ser tão simples quanto conversar com os vizinhos sobre um canteiro esquecido ou cuidar de uma planta na janela. Com planejamento, cooperação e continuidade, pequenos espaços se tornam lugares de encontro e aprendizagem. Assim, a natureza deixa de ser apenas um destino distante e passa a fazer parte do cotidiano, melhorando a experiência de viver na cidade.</p>
+            </div>
+        </article>
+
+        <section class="comparison" aria-labelledby="comparacao">
+            <h2 id="comparacao">Qual formato oferece melhor legibilidade?</h2>
+            <p>Duas colunas costumam ser mais confortáveis para uma matéria longa: cada linha fica menos estreita e é mais fácil acompanhar o texto. Três colunas podem funcionar em monitores largos e para leitura rápida, mas tendem a deixar as linhas curtas. O espaçamento entre colunas é de 40 px; a melhor escolha depende da largura disponível e do público.</p>
+        </section>
+    </main>
+    <script>
+        const article = document.querySelector("#materia");
+        const buttons = document.querySelectorAll(".controls button");
+
+        buttons.forEach((button) => {
+            button.addEventListener("click", () => {
+                const count = button.dataset.columns;
+                article.className = `article-copy columns-${count}`;
+
+                buttons.forEach((item) => {
+                    item.setAttribute("aria-pressed", String(item === button));
+                });
+            });
+        });
+    </script>
+</body>
+</html>
